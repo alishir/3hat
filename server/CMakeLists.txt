@@ -1,0 +1,20 @@
+add_executable(server
+  main.cpp
+  FizzContext.cpp
+  HQClient.cpp
+  HQLoggerHelper.cpp
+  HQServer.cpp
+  HQParams.cpp
+  SampleHandlers.cpp
+  PartiallyReliableCurlClient.cpp
+  CurlClient.cpp
+  )
+
+target_link_libraries(server
+  PUBLIC
+  proxygen::proxygen
+  proxygen::proxygenhttpserver
+  mvfst::mvfst_transport
+  mvfst::mvfst_client
+  mvfst::mvfst_server
+  )
