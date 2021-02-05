@@ -12,8 +12,8 @@
 #include <folly/ssl/Init.h>
 
 #include "ConnIdLogger.h"
+#include "HQClient.h"
 #include "HQParams.h"
-#include "HQServer.h"
 #include <proxygen/lib/transport/PersistentQuicPskCache.h>
 
 using namespace quic::samples;
@@ -39,8 +39,8 @@ int main(int argc, char* argv[]) {
     }
 
     switch (params.mode) {
-      case HQMode::SERVER:
-        startServer(params);
+      case HQMode::CLIENT:
+        startClient(params);
         break;
       default:
         LOG(ERROR) << "Unknown mode specified: ";

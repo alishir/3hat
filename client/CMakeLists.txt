@@ -1,15 +1,15 @@
-add_executable(server
+add_executable(client
   main.cpp
   FizzContext.cpp
+  HQClient.cpp
   HQLoggerHelper.cpp
-  HQServer.cpp
   HQParams.cpp
   SampleHandlers.cpp
   PartiallyReliableCurlClient.cpp
   CurlClient.cpp
   )
 
-target_link_libraries(server
+target_link_libraries(client
   PUBLIC
   proxygen::proxygen
   proxygen::proxygenhttpserver

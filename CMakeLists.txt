@@ -23,4 +23,4 @@ foreach (_variableName ${_variableNames})
 endforeach()
 
 add_subdirectory(server)
-# add_subdirectory(client)
+add_subdirectory(client)
